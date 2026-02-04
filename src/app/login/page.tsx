@@ -71,7 +71,7 @@ export default function LoginPage() {
               />
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className='pt-6'>
             <Button
               type="submit"
               className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-6 rounded-lg shadow-lg transition-all"

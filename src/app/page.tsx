@@ -136,21 +136,21 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               size="lg"
-              className="bg-green-600 hover:bg-green-700 text-white font-bold py-7 px-10 rounded-2xl shadow-xl transition-all hover:scale-105"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold py-7 px-10 w-full flex-1 rounded-2xl shadow-xl transition-all hover:scale-105"
               asChild
             >
               <Link href="https://wa.me/8801234567890" target="_blank" rel="noreferrer">
-                <WhatsApp className="mr-3 h-6 w-6" />
+                <WhatsApp className="h-6 w-6" />
                 WhatsApp Us
               </Link>
             </Button>
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-7 px-10 rounded-2xl shadow-xl transition-all hover:scale-105"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-7 px-10 w-full rounded-2xl shadow-xl transition-all flex-1 hover:scale-105"
               asChild
             >
               <Link href="https://m.me/shanto" target="_blank" rel="noreferrer">
-                <MessageCircle className="mr-3 h-6 w-6" />
+                <MessageCircle className="h-6 w-6" />
                 Messenger
               </Link>
             </Button>

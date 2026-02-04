@@ -139,10 +139,10 @@ export default function AdminsPage() {
 
   const getRoleBadgeColor = (role: string) => {
     switch (role) {
-      case 'Super Admin': return 'bg-purple-100 text-purple-700 border-purple-200';
-      case 'Admin': return 'bg-blue-100 text-blue-700 border-blue-200';
-      case 'Manager': return 'bg-green-100 text-green-700 border-green-200';
-      case 'Cashier': return 'bg-orange-100 text-orange-700 border-orange-200';
+      case 'SUPER_ADMIN': return 'bg-purple-100 text-purple-700 border-purple-200';
+      case 'ADMIN': return 'bg-blue-100 text-blue-700 border-blue-200';
+      case 'MANAGER': return 'bg-green-100 text-green-700 border-green-200';
+      case 'CASHIER': return 'bg-orange-100 text-orange-700 border-orange-200';
       default: return 'bg-slate-100 text-slate-700 border-slate-200';
     }
   };
