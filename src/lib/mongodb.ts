@@ -1,7 +1,11 @@
+import '@/models/ActivityLog';
+import '@/models/Donation';
+import '@/models/Donor';
+import '@/models/PaymentMethod';
+import '@/models/User';
 import mongoose from 'mongoose';
 
 declare global {
-  // eslint-disable-next-line no-var
   var mongoose: {
     conn: mongoose.Connection | null;
     promise: Promise<mongoose.Connection> | null;
