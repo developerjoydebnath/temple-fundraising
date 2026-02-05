@@ -137,6 +137,7 @@ const NavContent = ({ pathname, handleLogout, user }: { pathname: string, handle
                 const isActive = pathname === item.href;
                 return (
                   <Link
+                  prefetch={false}
                     key={item.href}
                     href={item.href}
                     className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
@@ -153,6 +154,7 @@ const NavContent = ({ pathname, handleLogout, user }: { pathname: string, handle
               })}
               <div className="pt-4 mt-4 border-t border-slate-800">
                 <Link
+                prefetch={false}
                   href="/"
                   target="_blank"
                   className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all hover:bg-white/5 hover:text-white group"

@@ -23,7 +23,7 @@ export async function GET(request: Request) {
 
     const logs = await ActivityLog.find(query)
       .populate('adminId', 'name')
-      .sort({ createdAt: -1 })
+      .sort({ timestamp: -1 })
       .skip(skip)
       .limit(limit);
 

@@ -28,4 +28,7 @@ const ActivityLogSchema = new Schema<IActivityLog>(
   { timestamps: { createdAt: 'timestamp', updatedAt: false } }
 );
 
+// Delete logs older than 30 days (2,592,000 seconds)
+ActivityLogSchema.index({ timestamp: 1 }, { expireAfterSeconds: 2592000 });
+
 export default mongoose.models.ActivityLog || mongoose.model<IActivityLog>('ActivityLog', ActivityLogSchema);

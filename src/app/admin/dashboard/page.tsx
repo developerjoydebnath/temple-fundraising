@@ -10,10 +10,8 @@ import {
 import { Skeleton } from '@/components/ui/skeleton';
 import api from '@/lib/api';
 import {
-  ArrowUpRight,
   Clock,
   DollarSign,
-  TrendingUp,
   Trophy,
   Users
 } from 'lucide-react';
@@ -61,9 +59,6 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-slate-900">৳ {stats.totalFunds.toLocaleString()}</div>
-            <p className="text-xs text-slate-500 mt-1 flex items-center">
-              <TrendingUp className="h-3 w-3 mr-1 text-green-500" /> +12.5% from last month
-            </p>
           </CardContent>
         </Card>
 
@@ -76,9 +71,6 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-slate-900">{stats.totalDonors}</div>
-            <p className="text-xs text-slate-500 mt-1 flex items-center">
-              <ArrowUpRight className="h-3 w-3 mr-1 text-blue-500" /> 8 new this week
-            </p>
           </CardContent>
         </Card>
 

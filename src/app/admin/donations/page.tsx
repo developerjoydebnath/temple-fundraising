@@ -401,7 +401,7 @@ export default function DonationsPage() {
                     </PaginationItem>
                     {Array.from({ length: data.pagination.pages }).map((_, i) => (
                         <PaginationItem key={i}>
-                            <PaginationLink 
+                            <PaginationLink
                                isActive={page === i + 1}
                                onClick={(e) => { e.preventDefault(); setPage(i + 1); }}
                                className="cursor-pointer"
