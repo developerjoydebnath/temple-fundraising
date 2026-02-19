@@ -83,10 +83,10 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             <div className="text-xl font-bold text-slate-900 truncate">
-               {stats.bestDonor ? stats.bestDonor.name : 'N/A'}
+              {stats?.bestDonor ? stats?.bestDonor?.name : 'N/A'}
             </div>
             <p className="text-xs text-slate-500 mt-1">
-               {stats.bestDonor ? `৳ ${stats.bestDonor.totalDonation.toLocaleString()} total` : 'No donations yet'}
+              {stats?.bestDonor ? `৳ ${stats?.bestDonor?.totalDonation.toLocaleString()} total` : 'No donations yet'}
             </p>
           </CardContent>
         </Card>
@@ -104,26 +104,26 @@ export default function DashboardPage() {
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                  <XAxis 
-                    dataKey="name" 
-                    axisLine={false} 
-                    tickLine={false} 
+                  <XAxis
+                    dataKey="name"
+                    axisLine={false}
+                    tickLine={false}
                     tick={{ fill: '#64748b', fontSize: 12 }}
                   />
-                  <YAxis 
-                    axisLine={false} 
-                    tickLine={false} 
+                  <YAxis
+                    axisLine={false}
+                    tickLine={false}
                     tick={{ fill: '#64748b', fontSize: 12 }}
                     tickFormatter={(value) => `৳${value}`}
                   />
-                  <Tooltip 
+                  <Tooltip
                     contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}
                   />
-                  <Line 
-                    type="monotone" 
-                    dataKey="total" 
-                    stroke="#ea580c" 
-                    strokeWidth={3} 
+                  <Line
+                    type="monotone"
+                    dataKey="total"
+                    stroke="#ea580c"
+                    strokeWidth={3}
                     dot={{ fill: '#ea580c', r: 4 }}
                     activeDot={{ r: 6, strokeWidth: 0 }}
                   />
@@ -144,30 +144,30 @@ export default function DashboardPage() {
             <CardDescription>Latest contributions received</CardDescription>
           </CardHeader>
           <CardContent className="px-0">
-             {recentDonations.length > 0 ? (
-               <div className="divide-y divide-slate-100">
-                  {recentDonations.map((donation: any) => (
-                    <div key={donation._id} className="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
-                      <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
-                          <Clock className="h-5 w-5" />
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900">{donation.donorId.name}</p>
-                          <p className="text-xs text-slate-500">{new Date(donation.date).toLocaleDateString()}</p>
-                        </div>
+            {recentDonations.length > 0 ? (
+              <div className="divide-y divide-slate-100">
+                {recentDonations.map((donation: any) => (
+                  <div key={donation._id} className="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
+                        <Clock className="h-5 w-5" />
                       </div>
-                      <div className="text-sm font-bold text-slate-900">
-                        ৳ {donation.amount.toLocaleString()}
+                      <div>
+                        <p className="text-sm font-semibold text-slate-900">{donation.donorId.name}</p>
+                        <p className="text-xs text-slate-500">{new Date(donation.date).toLocaleDateString()}</p>
                       </div>
                     </div>
-                  ))}
-               </div>
-             ) : (
-               <div className="px-6 py-10 text-center text-slate-400">
-                 No recent donations found
-               </div>
-             )}
+                    <div className="text-sm font-bold text-slate-900">
+                      ৳ {donation.amount.toLocaleString()}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="px-6 py-10 text-center text-slate-400">
+                No recent donations found
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
