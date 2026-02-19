@@ -54,11 +54,8 @@ export default function LandingPage() {
         />
         <div className="relative z-10 text-center text-white px-4 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
-            মির্জাকালু সনাতন যুব ফাউন্ডেশন এ আপনার অবদান দিন
+            মির্জাকালু সনাতন যুব ফাউন্ডেশন
           </h1>
-          <p className="text-lg md:text-xl mb-8 opacity-90 drop-shadow-md">
-            আমাদের সম্প্রদায়ের উন্নয়নে অংশ নিন এবং মির্জাকালু সনাতন যুব ফাউন্ডেশন এ আপনার অবদান দিন।
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
