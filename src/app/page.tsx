@@ -29,7 +29,7 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/hero.png"
+          src="/gallery/group-img.jpg"
           alt="Hindu Temple Hero"
           fill
           className="object-cover brightness-50"
@@ -56,7 +56,7 @@ export default function LandingPage() {
               className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white/20 py-6 px-8 rounded-full shadow-xl"
               asChild
             >
-              <Link prefetch={false} href="https://facebook.com/groups/shanto-fundraising" target="_blank" rel="noreferrer">
+              <Link prefetch={false} href="https://facebook.com/groups/1842147625847510" target="_blank" rel="noreferrer">
                 <Facebook className="mr-2 h-5 w-5" />
                 Facebook Group
               </Link>
