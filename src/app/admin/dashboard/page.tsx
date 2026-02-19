@@ -153,8 +153,8 @@ export default function DashboardPage() {
                         <Clock className="h-5 w-5" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-slate-900">{donation.donorId.name}</p>
-                        <p className="text-xs text-slate-500">{new Date(donation.date).toLocaleDateString()}</p>
+                        <p className="text-sm font-semibold text-slate-900">{donation?.donorId?.name ?? 'Unknown Donor'}</p>
+                        <p className="text-xs text-slate-500">{new Date(donation?.date).toLocaleDateString()}</p>
                       </div>
                     </div>
                     <div className="text-sm font-bold text-slate-900">
