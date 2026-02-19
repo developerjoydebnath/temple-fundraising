@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 import { SWRProvider } from '@/components/SWRProvider';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "মির্জাকালু সনাতন যুব ফাউন্ডেশন",
+  description: "মির্জাকালু সনাতন যুব ফাউন্ডেশন এর অফিসিয়াল ওয়েবসাইট। এখানে আমাদের কার্যক্রম, প্রকল্প এবং সংবাদ সম্পর্কে তথ্য পাবেন। আমাদের সাথে যোগাযোগ করতে পারেন এবং আমাদের সম্প্রদায়ের উন্নয়নে অংশ নিতে পারেন।",
+};
 
 export default function RootLayout({
   children,
