@@ -131,7 +131,7 @@ export default function DashboardPage() {
               </ResponsiveContainer>
             ) : (
               <div className="h-full flex items-center justify-center text-slate-400">
-                No data available to display chart
+                No data available to display
               </div>
             )}
           </CardContent>
