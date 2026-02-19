@@ -24,6 +24,23 @@ export default function LandingPage() {
     document.getElementById('donations')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openMessenger = () => {
+    const appLink = "fb-messenger://user-thread/AbaK-UAY-3_ywf_a";
+    const webLink = "https://m.me/j/AbaK-UAY-3_ywf_a";
+
+    const start = Date.now();
+
+    window.location.href = appLink;
+
+    setTimeout(() => {
+      // If still on page after 1.5s → app not installed
+      if (Date.now() - start < 2000) {
+        window.open(webLink, "_blank");
+      }
+    }, 1500);
+  };
+
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans">
       {/* Hero Section */}
@@ -185,20 +202,19 @@ export default function LandingPage() {
             </Button>
             <Button
               size="lg"
+              onClick={openMessenger}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-7 px-10 w-full rounded-2xl shadow-xl transition-all flex-1 hover:scale-105"
-              asChild
             >
-              <Link prefetch={false} href="https://m.me/j/AbaK-UAY-3_ywf_a" target="_blank" rel="noreferrer">
-                <MessageCircle className="h-6 w-6" />
-                Messenger
-              </Link>
+              <MessageCircle className="h-6 w-6 mr-2" />
+              Messenger
             </Button>
+
           </div>
         </div>
       </section>
 
       {/* Gallery Section - Normal Grid */}
-      <section className="py-20 px-4 bg-white">
+      {/* <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Temple Vision</h2>
@@ -232,7 +248,7 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Recent Donations Section */}
       <RecentDonations />
